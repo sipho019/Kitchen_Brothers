@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Kitchen Brothers food and restaurant photographs in Mthatha.">
+  <meta name="theme-color" content="#111111">
+  <meta name="robots" content="index,follow">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>Gallery | Kitchen Brothers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Kitchen Brothers home"><span class="brand-mark">KB</span><span class="brand-name">KITCHEN <em>BROTHERS</em><small>WITH STRENGTH &amp; SAUCE</small></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  <nav class="nav" id="mainNav">
+    <a href="index.html">Home</a><a href="index.html#menu">Menu</a><a href="about.html" >About us</a><a href="gallery.html" aria-current="page">Gallery</a><a href="contact.html" >Contact</a>
+  </nav>
+  <a class="button button-gold cart-header" href="index.html#menu">Order online <span>↗</span></a>
+</header>
+<main>
+<section class="inner-page-hero"><p class="eyebrow">STRAIGHT FROM THE KITCHEN</p><h1>A little taste<br><em>of Kitchen Brothers.</em></h1><p>Take a look at the food and people behind the flavour.</p></section>
+<section class="section gallery-page-section">
+<div class="gallery-page-grid">
+<figure><img src="assets/food-feature.png" alt="Kitchen Brothers burger and loaded cheesy fries"><figcaption>Burger and loaded cheesy fries</figcaption></figure>
+<figure><img src="assets/team-kitchen.png" alt="Kitchen Brothers team preparing food"><figcaption>The Kitchen Brothers team</figcaption></figure>
+</div>
+<div class="section-heading original-heading"><p class="eyebrow">THE RESTAURANT MENU</p><h2>See what's <em>cooking.</em></h2><p>Browse the original menu boards supplied for this website.</p></div>
+<div class="menu-board-grid gallery-menu-boards">
+<a href="assets/menu-beef-burgers.png" target="_blank" rel="noopener"><img src="assets/menu-beef-burgers.png" alt="Original beef burger menu"><span>Beef burgers ↗</span></a>
+<a href="assets/menu-chicken-combos.png" target="_blank" rel="noopener"><img src="assets/menu-chicken-combos.png" alt="Original chicken burgers and combos menu"><span>Chicken burgers &amp; combos ↗</span></a>
+<a href="assets/menu-kotas-extras.png" target="_blank" rel="noopener"><img src="assets/menu-kotas-extras.png" alt="Original kotas and extras menu"><span>Kotas &amp; Extraaz ↗</span></a>
+<a href="assets/menu-wraps.png" target="_blank" rel="noopener"><img src="assets/menu-wraps.png" alt="Original wraps menu"><span>Wraps ↗</span></a>
+</div></section></main><footer class="site-footer"><a class="brand" href="index.html"><span class="brand-mark">KB</span><span class="brand-name">KITCHEN <em>BROTHERS</em></span></a><p>Mexican-inspired flavours. South African spirit.</p><small>© <span id="year"></span> Kitchen Brothers website concept. Draft for restaurant review.</small></footer>
+<script>document.querySelector("#year").textContent=new Date().getFullYear();const t=document.querySelector("#menuToggle"),n=document.querySelector("#mainNav");t.addEventListener("click",()=>{const o=n.classList.toggle("open");t.setAttribute("aria-expanded",String(o));t.textContent=o?"×":"☰"});n.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{n.classList.remove("open");t.setAttribute("aria-expanded","false");t.textContent="☰"}));</script>
+</body></html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kitchen Brothers in Mthatha — Mexican-inspired flavours and South African favourites. Explore the menu and prepare your order online.">
+  <meta name="theme-color" content="#111111">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kitchen Brothers | Mthatha">
+  <meta property="og:description" content="Mexican-inspired flavours with a South African soul. Explore the Kitchen Brothers menu in Mthatha.">
+  <meta property="og:image" content="assets/food-feature.png">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>Kitchen Brothers | Burgers, Kotas &amp; Mexican-Inspired Food in Mthatha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Kitchen Brothers home">
+    <span class="brand-mark">KB</span><span class="brand-name">KITCHEN <em>BROTHERS</em><small>WITH STRENGTH &amp; SAUCE</small></span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  <nav class="nav" id="mainNav">
+    <a href="index.html" aria-current="page">Home</a><a href="#menu">Menu</a><a href="about.html">About us</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+  </nav>
+  <button class="button button-gold cart-header" id="openCart">🛒 Your order <span id="cartCount" class="cart-count">0</span></button>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-shade"></div>
+    <div class="hero-inner">
+      <p class="eyebrow">MTHATHA · EASTERN CAPE</p>
+      <h1>Big flavour.<br><span>Brotherhood.</span></h1>
+      <p class="hero-copy">Mexican-inspired flavours with a South African soul. Find your next favourite at Kitchen Brothers.</p>
+      <div class="hero-actions"><a class="button button-gold" href="#menu">Explore the menu <span>↗</span></a><a class="button button-light-outline" href="contact.html">Find us</a></div>
+      <div class="hero-caption"><span class="caption-line"></span> GOOD FOOD. GOOD COMPANY.</div>
+    </div>
+    <div class="hero-photo"><img src="assets/food-feature.png" alt="Kitchen Brothers burger and loaded cheesy fries"></div>
+    <div class="hero-stamp"><strong>MADE<br>WITH<br>FLAVOUR</strong><span>✦</span></div>
+  </section>
+
+  <section class="quick-strip">
+    <div><span class="strip-icon">⌖</span><span><strong>Find us</strong><small>6 Sidwadwa Dr, Mthatha</small></span></div>
+    <div><span class="strip-icon">☎</span><span><strong>Call the team</strong><small>081 796 4887 · 082 321 3942</small></span></div>
+    <div><span class="strip-icon">✦</span><span><strong>Fusion favourites</strong><small>Mexican-inspired &amp; South African</small></span></div>
+  </section>
+
+  <section class="section menu-section" id="menu">
+    <div class="section-heading">
+      <p class="eyebrow">MADE FOR YOUR APPETITE</p><h2>Something good<br><em>is on the menu.</em></h2>
+      <p>Explore the Kitchen Brothers menu. Prices and item names below are transcribed from the menu photographs supplied for this website draft.</p>
+    </div>
+    <div class="category-tabs" id="categoryTabs">
+      <button class="category-tab active" data-category="all">All items</button>
+      <button class="category-tab" data-category="beef">Beef burgers</button>
+      <button class="category-tab" data-category="chicken">Chicken burgers</button>
+      <button class="category-tab" data-category="kotas">Kotas</button>
+      <button class="category-tab" data-category="wraps">Wraps</button>
+      <button class="category-tab" data-category="extras">Extraaz</button>
+      <button class="category-tab" data-category="combos">Combos</button>
+    </div>
+    <div class="menu-grid" id="menuGrid"></div>
+    <p class="menu-footnote">Please confirm current availability and prices with the restaurant before placing a real order. Online payment is not active on this draft website.</p>
+  </section>
+
+  <section class="menu-board-section">
+    <div class="board-copy"><p class="eyebrow">THE ORIGINAL MENU</p><h2>Take a closer<br>look.</h2><p>We've kept the supplied menu artwork available too, so visitors can view the restaurant's original menu boards.</p></div>
+    <div class="menu-board-grid">
+      <a href="assets/menu-beef-burgers.png" target="_blank"><img src="assets/menu-beef-burgers.png" alt="Original Kitchen Brothers beef burger menu"><span>Beef burgers ↗</span></a>
+      <a href="assets/menu-chicken-combos.png" target="_blank"><img src="assets/menu-chicken-combos.png" alt="Original Kitchen Brothers chicken burger and combo menu"><span>Chicken burgers &amp; combos ↗</span></a>
+      <a href="assets/menu-kotas-extras.png" target="_blank"><img src="assets/menu-kotas-extras.png" alt="Original Kitchen Brothers kota and extras menu"><span>Kotas &amp; Extraaz ↗</span></a>
+      <a href="assets/menu-wraps.png" target="_blank"><img src="assets/menu-wraps.png" alt="Original Kitchen Brothers wraps menu"><span>Wraps ↗</span></a>
+    </div>
+  </section>
+
+</main>
+<footer class="site-footer"><a class="brand" href="#home"><span class="brand-mark">KB</span><span class="brand-name">KITCHEN <em>BROTHERS</em></span></a><p>Mexican-inspired flavours. South African spirit.</p><small>© <span id="year"></span> Kitchen Brothers website concept. Draft for restaurant review; not an official ordering or payment service yet.</small></footer>
+
+<div class="modal-backdrop" id="cartBackdrop" hidden>
+  <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+    <div class="modal-heading"><div><p class="eyebrow">YOUR SELECTION</p><h2 id="cartTitle">Your order</h2></div><button class="close-modal" data-close="cartBackdrop" aria-label="Close">×</button></div>
+    <div id="cartItems"></div><div class="cart-total"><span>Subtotal</span><strong id="cartSubtotal">R0.00</strong></div>
+    <p class="fine-print">This is a front-end ordering preview. No order is sent to the restaurant and no payment is collected.</p>
+    <button class="button button-gold full-button" id="goCheckout" disabled>Continue to checkout</button>
+  </section>
+</div>
+<div class="modal-backdrop" id="checkoutBackdrop" hidden>
+  <section class="modal-panel checkout-panel" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="modal-heading"><div><p class="eyebrow">ALMOST THERE</p><h2 id="checkoutTitle">Checkout preview</h2></div><button class="close-modal" data-close="checkoutBackdrop" aria-label="Close">×</button></div>
+    <form id="checkoutForm">
+      <div class="fulfilment-options">
+        <label class="choice"><input type="radio" name="fulfilment" value="Collection" checked><span><strong>Collection</strong><small>Pick up at the restaurant</small></span></label>
+        <label class="choice"><input type="radio" name="fulfilment" value="Delivery"><span><strong>Delivery</strong><small>Delivery details required</small></span></label>
+      </div>
+      <div class="form-grid">
+        <label>Full name<input name="customerName" autocomplete="name" required placeholder="Your name"></label>
+        <label>Phone number<input name="phone" type="tel" autocomplete="tel" required placeholder="Your contact number"></label>
+        <label id="addressField" hidden>Delivery address<textarea name="address" rows="2" placeholder="Street, suburb and town"></textarea></label>
+        <label>Order notes (optional)<textarea name="notes" rows="2" placeholder="Any special instructions?"></textarea></label>
+      </div>
+      <div class="cart-total"><span>Items subtotal</span><strong id="checkoutSubtotal">R0.00</strong></div>
+      <p class="fine-print">Delivery fee is not configured. Payment gateway and restaurant order notifications will be connected in a later development stage.</p>
+      <button class="button button-gold full-button" type="submit">Review order</button>
+    </form>
+  </section>
+</div>
+<div class="modal-backdrop" id="previewBackdrop" hidden>
+  <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="previewTitle">
+    <div class="modal-heading"><div><p class="eyebrow">ORDER SUMMARY</p><h2 id="previewTitle">Review your details</h2></div><button class="close-modal" data-close="previewBackdrop" aria-label="Close">×</button></div>
+    <div id="orderPreview"></div><p class="fine-print">Demo only: this order has not been submitted and no payment has been taken.</p>
+    <button class="button button-gold full-button" id="copyOrder">Copy order summary</button>
+    <button class="button button-dark full-button" id="backToMenu">Back to menu</button>
+  </section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
