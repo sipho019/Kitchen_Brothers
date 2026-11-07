@@ -1,5 +1,5 @@
 
-# 🍔 Kitchen Brothers | Restaurant Website & Online Ordering Experience
+#  Kitchen Brothers | Restaurant Website & Online Ordering Experience
 
 ![Project Status](https://img.shields.io/badge/Project-Development%20Complete-gold)
 ![HTML5](https://img.shields.io/badge/HTML5-Structure-orange)
@@ -16,7 +16,7 @@ The website is designed to establish a professional online presence, showcase th
 
 
 
-## 📸 Project Overview
+## Project Overview
 
 Kitchen Brothers offers a fusion of Mexican-inspired cuisine and South African favourites.
 
@@ -33,7 +33,7 @@ The objective of this project is to transform the restaurant's existing brand id
 - Restaurant contact information and location integration.
 
 
-## 🎯 Project Objectives
+## Project Objectives
 
 The primary objectives were to:
 
@@ -46,7 +46,7 @@ The primary objectives were to:
 
 
 
-## 🛠️ Technologies & Tools
+## Technologies & Tools
 
 | Technology | Purpose |
 | HTML5 | Website structure and content |
@@ -127,7 +127,7 @@ Responsive layouts and mobile navigation help maintain usability across devices.
 
 ---
 
-## 🤖 AI-Assisted Development Workflow
+## AI-Assisted Development Workflow
 
 Artificial Intelligence was incorporated into the development process as a productivity and learning tool.
 
@@ -212,7 +212,7 @@ Alternatively, open the HTML file directly in your browser.
 
 ---
 
-## 🌍 Deployment
+##  Deployment
 
 The project is prepared for static website deployment through Netlify.
 
@@ -230,7 +230,7 @@ Deployment process:
 
 ---
 
-## 🔮 Future Improvements
+##  Future Improvements
 
 The project is designed to evolve beyond its current front-end implementation.
 
@@ -250,13 +250,13 @@ These improvements will transform the current ordering demonstration into a full
 
 ---
 
-## 💼 What This Project Demonstrates to Potential Clients
+##  What This Project Demonstrates to Potential Clients
 
 Kitchen Brothers represents the type of digital solution I can develop for businesses looking to strengthen their online presence.
 
 I aim to create websites that are not only visually attractive but also practical, responsive and aligned with business requirements.
 
-## 👨‍💻 Developer
+##  Developer
 
 **Developed by: Neo Sipho Mshumpela**
 
