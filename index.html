@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -29,11 +29,11 @@
   </a>
   <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
   <nav class="nav" id="mainNav">
-    <a href="./index.html" aria-current="page">Home</a>
+    <a href=".index.html" aria-current="page">Home</a>
     <a href="#menu">Menu</a>
-    <a href="./about.html">About us</a>
-    <a href="./gallery.html">Gallery</a>
-    <a href="./contact.html">Contact</a>
+    <a href="./html/about.html">About us</a>
+    <a href="./html/gallery.html">Gallery</a>
+    <a href="./html/contact.html">Contact</a>
   </nav>
   <button class="button button-gold cart-header" id="openCart">🛒 Your order <span id="cartCount" class="cart-count">0</span></button>
 </header>
@@ -45,11 +45,11 @@
       <p class="eyebrow">MTHATHA · EASTERN CAPE</p>
       <h1>Big flavour.<br><span>Brotherhood.</span></h1>
       <p class="hero-copy">Mexican-inspired flavours with a South African soul. Find your next favourite at Kitchen Brothers.</p>
-      <div class="hero-actions"><a class="button button-gold" href="#menu">Explore the menu <span>↗</span></a><a class="button button-light-outline" href="contact.html">Find us</a></div>
+      <div class="hero-actions"><a class="button button-gold" href="#menu">Explore the menu <span>↗</span></a><a class="button button-light-outline" href="./html/contact.html">Find us</a></div>
       <div class="hero-caption"><span class="caption-line"></span> GOOD FOOD. GOOD COMPANY.</div>
     </div>
     <div class="hero-photo">
-      <img src="../assets/food-feature.png" alt="Kitchen Brothers burger and loaded cheesy fries"></div>
+      <img src="./assets/food-feature.png" alt="Kitchen Brothers burger and loaded cheesy fries"></div>
     <div class="hero-stamp"><strong>MADE<br>WITH<br>FLAVOUR</strong><span>✦</span></div>
   </section>
 
@@ -80,14 +80,14 @@
   <section class="menu-board-section">
     <div class="board-copy"><p class="eyebrow">THE ORIGINAL MENU</p><h2>Take a closer<br>look.</h2><p>We've kept the supplied menu artwork available too, so visitors can view the restaurant's original menu boards.</p></div>
     <div class="menu-board-grid">
-      <a href="../assets/menu-beef-burgers.png" target="_blank">
-        <img src="../assets/menu-beef-burgers.png" alt="Original Kitchen Brothers beef burger menu"><span>Beef burgers ↗</span></a>
-      <a href="../assets/menu-chicken-combos.png" target="_blank">
-        <img src="../assets/menu-chicken-combos.png" alt="Original Kitchen Brothers chicken burger and combo menu"><span>Chicken burgers &amp; combos ↗</span></a>
-      <a href="../assets/menu-kotas-extras.png" target="_blank">
-        <img src="../assets/menu-kotas-extras.png" alt="Original Kitchen Brothers kota and extras menu"><span>Kotas &amp; Extraaz ↗</span></a>
-      <a href="../assets/menu-wraps.png" target="_blank">
-        <img src="../assets/menu-wraps.png" alt="Original Kitchen Brothers wraps menu"><span>Wraps ↗</span></a>
+      <a href="./assets/menu-beef-burgers.png" target="_blank">
+        <img src="./assets/menu-beef-burgers.png" alt="Original Kitchen Brothers beef burger menu"><span>Beef burgers ↗</span></a>
+      <a href="./assets/menu-chicken-combos.png" target="_blank">
+        <img src="./assets/menu-chicken-combos.png" alt="Original Kitchen Brothers chicken burger and combo menu"><span>Chicken burgers &amp; combos ↗</span></a>
+      <a href="./assets/menu-kotas-extras.png" target="_blank">
+        <img src="./assets/menu-kotas-extras.png" alt="Original Kitchen Brothers kota and extras menu"><span>Kotas &amp; Extraaz ↗</span></a>
+      <a href="./assets/menu-wraps.png" target="_blank">
+        <img src="./assets/menu-wraps.png" alt="Original Kitchen Brothers wraps menu"><span>Wraps ↗</span></a>
     </div>
   </section>
 
@@ -96,8 +96,16 @@
 
 <div class="modal-backdrop" id="cartBackdrop" hidden>
   <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
-    <div class="modal-heading"><div><p class="eyebrow">YOUR SELECTION</p><h2 id="cartTitle">Your order</h2></div><button class="close-modal" data-close="cartBackdrop" aria-label="Close">×</button></div>
-    <div id="cartItems"></div><div class="cart-total"><span>Subtotal</span><strong id="cartSubtotal">R0.00</strong></div>
+    <div class="modal-heading">
+      <div><p class="eyebrow">YOUR SELECTION</p><h2 id="cartTitle">Your order</h2>
+      </div>
+      <button class="close-modal" data-close="cartBackdrop" aria-label="Close">×</button>
+  </div>
+    <div id="cartItems">
+
+    </div>
+    <div class="cart-total"><span>Subtotal</span><strong id="cartSubtotal">R0.00</strong>
+    </div>
     <p class="fine-print">This is a front-end ordering preview. No order is sent to the restaurant and no payment is collected.</p>
     <button class="button button-gold full-button" id="goCheckout" disabled>Continue to checkout</button>
   </section>
@@ -105,11 +113,19 @@
 
 <div class="modal-backdrop" id="checkoutBackdrop" hidden>
   <section class="modal-panel checkout-panel" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
-    <div class="modal-heading"><div><p class="eyebrow">ALMOST THERE</p><h2 id="checkoutTitle">Checkout preview</h2></div><button class="close-modal" data-close="checkoutBackdrop" aria-label="Close">×</button></div>
+    <div class="modal-heading">
+      <div><p class="eyebrow">ALMOST THERE</p>
+        <h2 id="checkoutTitle">Checkout preview</h2>
+      </div>
+      <button class="close-modal" data-close="checkoutBackdrop" aria-label="Close">×</button>
+    </div>
+    
     <form id="checkoutForm">
       <div class="fulfilment-options">
-        <label class="choice"><input type="radio" name="fulfilment" value="Collection" checked><span><strong>Collection</strong><small>Pick up at the restaurant</small></span></label>
-        <label class="choice"><input type="radio" name="fulfilment" value="Delivery"><span><strong>Delivery</strong><small>Delivery details required</small></span></label>
+        <label class="choice"><input type="radio" name="fulfilment" value="Collection" checked><span><strong>Collection</strong><small>Pick up at the restaurant</small></span>
+        </label>
+        <label class="choice"><input type="radio" name="fulfilment" value="Delivery"><span><strong>Delivery</strong><small>Delivery details required</small></span>
+        </label>
       </div>
 
       <div class="form-grid">
