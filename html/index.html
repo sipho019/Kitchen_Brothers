@@ -18,18 +18,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 
 </head>
 
 <body>
 <header class="site-header">
-  <a class="brand" href="index.html" aria-label="Kitchen Brothers home">
+  <a class="brand" href="./index.html" aria-label="Kitchen Brothers home">
     <span class="brand-mark">KB</span><span class="brand-name">KITCHEN <em>BROTHERS</em><small>WITH STRENGTH &amp; SAUCE</small></span>
   </a>
   <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
   <nav class="nav" id="mainNav">
-    <a href="index.html" aria-current="page">Home</a><a href="#menu">Menu</a><a href="about.html">About us</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+    <a href="./index.html" aria-current="page">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="./about.html">About us</a>
+    <a href="./gallery.html">Gallery</a>
+    <a href="./contact.html">Contact</a>
   </nav>
   <button class="button button-gold cart-header" id="openCart">🛒 Your order <span id="cartCount" class="cart-count">0</span></button>
 </header>
@@ -45,7 +49,7 @@
       <div class="hero-caption"><span class="caption-line"></span> GOOD FOOD. GOOD COMPANY.</div>
     </div>
     <div class="hero-photo">
-      <img src="assets/food-feature.png" alt="Kitchen Brothers burger and loaded cheesy fries"></div>
+      <img src="../assets/food-feature.png" alt="Kitchen Brothers burger and loaded cheesy fries"></div>
     <div class="hero-stamp"><strong>MADE<br>WITH<br>FLAVOUR</strong><span>✦</span></div>
   </section>
 
@@ -76,14 +80,14 @@
   <section class="menu-board-section">
     <div class="board-copy"><p class="eyebrow">THE ORIGINAL MENU</p><h2>Take a closer<br>look.</h2><p>We've kept the supplied menu artwork available too, so visitors can view the restaurant's original menu boards.</p></div>
     <div class="menu-board-grid">
-      <a href="assets/menu-beef-burgers.png" target="_blank">
-        <img src="assets/menu-beef-burgers.png" alt="Original Kitchen Brothers beef burger menu"><span>Beef burgers ↗</span></a>
-      <a href="assets/menu-chicken-combos.png" target="_blank">
-        <img src="assets/menu-chicken-combos.png" alt="Original Kitchen Brothers chicken burger and combo menu"><span>Chicken burgers &amp; combos ↗</span></a>
-      <a href="assets/menu-kotas-extras.png" target="_blank">
-        <img src="assets/menu-kotas-extras.png" alt="Original Kitchen Brothers kota and extras menu"><span>Kotas &amp; Extraaz ↗</span></a>
-      <a href="assets/menu-wraps.png" target="_blank">
-        <img src="assets/menu-wraps.png" alt="Original Kitchen Brothers wraps menu"><span>Wraps ↗</span></a>
+      <a href="../assets/menu-beef-burgers.png" target="_blank">
+        <img src="../assets/menu-beef-burgers.png" alt="Original Kitchen Brothers beef burger menu"><span>Beef burgers ↗</span></a>
+      <a href="../assets/menu-chicken-combos.png" target="_blank">
+        <img src="../assets/menu-chicken-combos.png" alt="Original Kitchen Brothers chicken burger and combo menu"><span>Chicken burgers &amp; combos ↗</span></a>
+      <a href="../assets/menu-kotas-extras.png" target="_blank">
+        <img src="../assets/menu-kotas-extras.png" alt="Original Kitchen Brothers kota and extras menu"><span>Kotas &amp; Extraaz ↗</span></a>
+      <a href="../assets/menu-wraps.png" target="_blank">
+        <img src="../assets/menu-wraps.png" alt="Original Kitchen Brothers wraps menu"><span>Wraps ↗</span></a>
     </div>
   </section>
 
@@ -98,6 +102,7 @@
     <button class="button button-gold full-button" id="goCheckout" disabled>Continue to checkout</button>
   </section>
 </div>
+
 <div class="modal-backdrop" id="checkoutBackdrop" hidden>
   <section class="modal-panel checkout-panel" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
     <div class="modal-heading"><div><p class="eyebrow">ALMOST THERE</p><h2 id="checkoutTitle">Checkout preview</h2></div><button class="close-modal" data-close="checkoutBackdrop" aria-label="Close">×</button></div>
@@ -106,18 +111,21 @@
         <label class="choice"><input type="radio" name="fulfilment" value="Collection" checked><span><strong>Collection</strong><small>Pick up at the restaurant</small></span></label>
         <label class="choice"><input type="radio" name="fulfilment" value="Delivery"><span><strong>Delivery</strong><small>Delivery details required</small></span></label>
       </div>
+
       <div class="form-grid">
         <label>Full name<input name="customerName" autocomplete="name" required placeholder="Your name"></label>
         <label>Phone number<input name="phone" type="tel" autocomplete="tel" required placeholder="Your contact number"></label>
         <label id="addressField" hidden>Delivery address<textarea name="address" rows="2" placeholder="Street, suburb and town"></textarea></label>
         <label>Order notes (optional)<textarea name="notes" rows="2" placeholder="Any special instructions?"></textarea></label>
       </div>
+
       <div class="cart-total"><span>Items subtotal</span><strong id="checkoutSubtotal">R0.00</strong></div>
       <p class="fine-print">Delivery fee is not configured. Payment gateway and restaurant order notifications will be connected in a later development stage.</p>
       <button class="button button-gold full-button" type="submit">Review order</button>
     </form>
   </section>
 </div>
+
 <div class="modal-backdrop" id="previewBackdrop" hidden>
   <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="previewTitle">
     <div class="modal-heading"><div><p class="eyebrow">ORDER SUMMARY</p><h2 id="previewTitle">Review your details</h2></div><button class="close-modal" data-close="previewBackdrop" aria-label="Close">×</button></div>
@@ -126,6 +134,7 @@
     <button class="button button-dark full-button" id="backToMenu">Back to menu</button>
   </section>
 </div>
-<script src="script.js"></script>
+
+<script src="../script.js"></script>
 </body>
 </html>

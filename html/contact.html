@@ -6,33 +6,58 @@
   <meta name="description" content="Contact Kitchen Brothers in Mthatha, view restaurant location and find directions.">
   <meta name="theme-color" content="#111111">
   <meta name="robots" content="index,follow">
+
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Contact | Kitchen Brothers</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
 <header class="site-header">
-  <a class="brand" href="index.html" aria-label="Kitchen Brothers home"><span class="brand-mark">KB</span><span class="brand-name">KITCHEN <em>BROTHERS</em><small>WITH STRENGTH &amp; SAUCE</small></span></a>
+  <a class="brand" href="./index.html" aria-label="Kitchen Brothers home"><span class="brand-mark">KB</span><span class="brand-name">KITCHEN <em>BROTHERS</em><small>WITH STRENGTH &amp; SAUCE</small></span></a>
   <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
   <nav class="nav" id="mainNav">
-    <a href="index.html">Home</a><a href="index.html#menu">Menu</a><a href="about.html" >About us</a><a href="gallery.html" >Gallery</a><a href="contact.html" aria-current="page">Contact</a>
+    <a href="./index.html">Home</a><a href="index.html#menu">Menu</a>
+    <a href="./about.html" >About us</a>
+    <a href="./gallery.html" >Gallery</a>
+    <a href="./contact.html" aria-current="page">Contact</a>
   </nav>
   <a class="button button-gold cart-header" href="index.html#menu">Order online <span>↗</span></a>
 </header>
+
 <main>
-<section class="inner-page-hero"><p class="eyebrow">WE'D LOVE TO HEAR FROM YOU</p><h1>Let's talk<br><em>good food.</em></h1><p>Questions about the menu? Contact the Kitchen Brothers team.</p></section>
+<section class="inner-page-hero"><p class="eyebrow">WE'D LOVE TO HEAR FROM YOU</p><h1>Let's talk<br><em>good food.</em></h1><p>Questions about the menu? Contact the Kitchen Brothers team.</p>
+</section>
 <section class="contact-page-layout">
 <div class="contact-info-card"><p class="eyebrow">VISIT OR CONTACT US</p><h2>Find Kitchen Brothers.</h2>
-<div class="contact-detail"><span>⌖</span><div><strong>Restaurant address</strong><p>6 Sidwadwa Dr, Sidwadwa View,<br>Mthatha, 5099, South Africa</p></div></div>
-<div class="contact-detail"><span>☎</span><div><strong>Telephone</strong><p><a href="tel:+27817964887">081 796 4887</a><br><a href="tel:+27823213942">082 321 3942</a></p></div></div>
-<div class="contact-detail"><span>◷</span><div><strong>Opening hours</strong><p>Please contact the restaurant to confirm current opening hours.</p></div></div>
-<div class="contact-actions"><a class="button button-gold" href="https://www.google.com/maps/search/?api=1&amp;query=Kitchen+Brothers%2C+6+Sidwadwa+Dr%2C+Mthatha" target="_blank" rel="noopener">Get directions ↗</a><a class="button button-dark" href="tel:+27817964887">Call restaurant</a></div>
+<div class="contact-detail"><span>⌖</span><div><strong>Restaurant address</strong><p>6 Sidwadwa Dr, Sidwadwa View,<br>Mthatha, 5099, South Africa</p>
 </div>
-<div class="contact-photo"><img src="assets/team-kitchen.png" alt="Kitchen Brothers team at the restaurant counter"><p>Good food. Good company. See you soon.</p></div>
+</div>
+<div class="contact-detail"><span>☎</span><div><strong>Telephone</strong><p><a href="tel:+27817964887">081 796 4887</a><br><a href="tel:+27823213942">082 321 3942</a></p>
+</div></div>
+<div class="contact-detail"><span>◷</span><div><strong>Opening hours</strong><p>Please contact the restaurant to confirm current opening hours.</p></div>
+</div>
+<div class="contact-actions"><a class="button button-gold" href="https://www.google.com/maps/search/?api=1&amp;query=Kitchen+Brothers%2C+6+Sidwadwa+Dr%2C+Mthatha" target="_blank" rel="noopener">Get directions ↗</a>
+  <a class="button button-dark" href="tel:+27817964887">Call restaurant</a>
+</div>
+</div>
+<div class="contact-photo"><img src="assets/team-kitchen.png" alt="Kitchen Brothers team at the restaurant counter"><p>Good food. Good company. See you soon.</p>
+</div>
 </section>
-</main><footer class="site-footer"><a class="brand" href="index.html"><span class="brand-mark">KB</span><span class="brand-name">KITCHEN <em>BROTHERS</em></span></a><p>Mexican-inspired flavours. South African spirit.</p><small>© <span id="year"></span> Kitchen Brothers website concept. Draft for restaurant review.</small></footer>
-<script>document.querySelector("#year").textContent=new Date().getFullYear();const t=document.querySelector("#menuToggle"),n=document.querySelector("#mainNav");t.addEventListener("click",()=>{const o=n.classList.toggle("open");t.setAttribute("aria-expanded",String(o));t.textContent=o?"×":"☰"});n.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{n.classList.remove("open");t.setAttribute("aria-expanded","false");t.textContent="☰"}));</script>
-</body></html>
+</main>
+<footer class="site-footer">
+  <a class="brand" href="./index.html"><span class="brand-mark">KB</span><span class="brand-name">KITCHEN <em>BROTHERS</em></span></a><p>Mexican-inspired flavours. South African spirit.</p><small>© <span id="year"></span> Kitchen Brothers website concept. Draft for restaurant review.</small>
+</footer>
+<script>
+document.querySelector("#year").textContent=new Date().getFullYear();
+const t=document.querySelector("#menuToggle"),n=document.querySelector("#mainNav");
+t.addEventListener("click",()=>{const o=n.classList.toggle("open");
+t.setAttribute("aria-expanded",String(o));t.textContent=o?"×":"☰"});
+n.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{n.classList.remove("open");
+t.setAttribute("aria-expanded","false");t.textContent="☰"}));
+</script>
+</body>
+</html>
