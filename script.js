@@ -44,12 +44,18 @@ const categoryNames={beef:"Beef burgers",chicken:"Chicken burgers",kotas:"Kotas"
 const money=n=>new Intl.NumberFormat("en-ZA",{style:"currency",currency:"ZAR"}).format(n);
 const cart={};
 const menuGrid=document.querySelector("#menuGrid");
+
 function renderMenu(category="all"){
  const list=category==="all"?products:products.filter(p=>p.category===category);
  menuGrid.innerHTML=list.map(p=>`<article class="menu-card"><div class="menu-card-top"><h3>${p.name}</h3><strong class="price">${money(p.price)}</strong></div><p>${p.desc}</p><div class="menu-card-bottom"><span class="category-label">${categoryNames[p.category]}</span><button class="add-button" data-add="${p.id}">Add +</button></div></article>`).join("");
 }
-document.querySelector("#categoryTabs").addEventListener("click",e=>{const b=e.target.closest("[data-category]");if(!b)return;document.querySelectorAll(".category-tab").forEach(x=>x.classList.toggle("active",x===b));renderMenu(b.dataset.category);});
-menuGrid.addEventListener("click",e=>{const b=e.target.closest("[data-add]");if(!b)return;cart[b.dataset.add]=(cart[b.dataset.add]||0)+1;renderCart();b.textContent="Added ✓";setTimeout(()=>{if(b.isConnected)b.textContent="Add +";},800);});
+
+document.querySelector("#categoryTabs").addEventListener("click",e=>{
+    const b=e.target.closest("[data-category]");if(!b)return;document.querySelectorAll(".category-tab").forEach(x=>x.classList.toggle("active",x===b));renderMenu(b.dataset.category);
+});
+menuGrid.addEventListener("click",e=>{
+    const b=e.target.closest("[data-add]");if(!b)return;cart[b.dataset.add]=(cart[b.dataset.add]||0)+1;renderCart();b.textContent="Added ✓";setTimeout(()=>{if(b.isConnected)b.textContent="Add +";},800);
+});
 const cartBackdrop=document.querySelector("#cartBackdrop"),checkoutBackdrop=document.querySelector("#checkoutBackdrop"),previewBackdrop=document.querySelector("#previewBackdrop");
 function qty(){return Object.values(cart).reduce((a,b)=>a+b,0)}
 function subtotal(){return Object.entries(cart).reduce((s,[id,q])=>s+products.find(p=>p.id===id).price*q,0)}

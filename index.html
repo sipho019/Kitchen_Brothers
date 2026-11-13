@@ -24,16 +24,16 @@
 
 <body>
 <header class="site-header">
-  <a class="brand" href="./index.html" aria-label="Kitchen Brothers home">
+  <a class="brand" href="index.html" aria-label="Kitchen Brothers home">
     <span class="brand-mark">KB</span><span class="brand-name">KITCHEN <em>BROTHERS</em><small>WITH STRENGTH &amp; SAUCE</small></span>
   </a>
   <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
   <nav class="nav" id="mainNav">
-    <a href=".index.html" aria-current="page">Home</a>
+    <a href="index.html" aria-current="page">Home</a>
     <a href="#menu">Menu</a>
-    <a href="./html/about.html">About us</a>
-    <a href="./html/gallery.html">Gallery</a>
-    <a href="./html/contact.html">Contact</a>
+    <a href="/html/about.html">About us</a>
+    <a href="/html/gallery.html">Gallery</a>
+    <a href="/html/contact.html">Contact</a>
   </nav>
   <button class="button button-gold cart-header" id="openCart">🛒 Your order <span id="cartCount" class="cart-count">0</span></button>
 </header>
@@ -49,7 +49,7 @@
       <div class="hero-caption"><span class="caption-line"></span> GOOD FOOD. GOOD COMPANY.</div>
     </div>
     <div class="hero-photo">
-      <img src="./assets/food-feature.png" alt="Kitchen Brothers burger and loaded cheesy fries"></div>
+      <img src="/assets/food-feature.png" alt="Kitchen Brothers burger and loaded cheesy fries"></div>
     <div class="hero-stamp"><strong>MADE<br>WITH<br>FLAVOUR</strong><span>✦</span></div>
   </section>
 
@@ -144,8 +144,16 @@
 
 <div class="modal-backdrop" id="previewBackdrop" hidden>
   <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="previewTitle">
-    <div class="modal-heading"><div><p class="eyebrow">ORDER SUMMARY</p><h2 id="previewTitle">Review your details</h2></div><button class="close-modal" data-close="previewBackdrop" aria-label="Close">×</button></div>
-    <div id="orderPreview"></div><p class="fine-print">Demo only: this order has not been submitted and no payment has been taken.</p>
+    <div class="modal-heading">
+      <div>
+        <p class="eyebrow">ORDER SUMMARY</p>
+        <h2 id="previewTitle">Review your details</h2>
+      </div>
+      <button class="close-modal" data-close="previewBackdrop" aria-label="Close">×</button>
+  </div>
+    <div id="orderPreview">
+    </div>
+    <p class="fine-print">Demo only: this order has not been submitted and no payment has been taken.</p>
     <button class="button button-gold full-button" id="copyOrder">Copy order summary</button>
     <button class="button button-dark full-button" id="backToMenu">Back to menu</button>
   </section>
